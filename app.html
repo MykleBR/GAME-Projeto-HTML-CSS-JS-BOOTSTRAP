@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mata Mosquito - A vingança!</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jogo.js"></script>
+    </head>
+    <body onresize="ajusta_campo_de_jogo()">
+        <div class="painel">
+            <div class="vidas">
+                <img id="v1" src="imagens/coracao_cheio.png" />
+                <img id="v2" src="imagens/coracao_cheio.png" />
+                <img id="v3" src="imagens/coracao_cheio.png" />
+            </div>
+            <div class="cronometro">
+                Tempo restante: <span id="timer"></span>
+            </div>
+        </div>
+        <script>
+            document.getElementById('timer').innerHTML = tempo
+            var criarMosca = setInterval(function(){
+                posicao_randomica()
+            },criaMoscaTempo)
+        </script>
+    </body>
+</html>
